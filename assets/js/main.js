@@ -26,6 +26,7 @@
     });
 
     navCollapse.addEventListener('show.bs.collapse', function () {
+      navCollapse.scrollTop = 0;
       document.body.style.overflow = 'hidden';
       if (navbar) {
         navbar.classList.remove('is-flowing');
