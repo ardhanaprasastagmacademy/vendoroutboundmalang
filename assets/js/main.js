@@ -20,7 +20,7 @@
       if (bsCollapse) bsCollapse.hide();
     };
 
-    var navLinks = navCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item');
+    var navLinks = navCollapse.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item, .btn-drawer-wa');
     navLinks.forEach(function (link) {
       link.addEventListener('click', closeMenu);
     });
@@ -37,6 +37,22 @@
     navCollapse.addEventListener('hidden.bs.collapse', function () {
       document.body.style.overflow = '';
       if (navbar) navbar.classList.remove('is-flowing');
+    });
+
+    // Close mobile menu on Escape key (R-32 Accessibility)
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navCollapse.classList.contains('show')) {
+        closeMenu();
+        if (toggler) toggler.focus();
+      }
+    });
+
+    // Reset body overflow when resizing to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 992 && navCollapse.classList.contains('show')) {
+        closeMenu();
+        document.body.style.overflow = '';
+      }
     });
   }
 
@@ -409,7 +425,7 @@
       if (!isValid) return;
 
       var text = formatWhatsAppMessage();
-      var waUrl = 'https://wa.me/628XXXXXXXXXX?text=' + encodeURIComponent(text);
+      var waUrl = 'https://wa.me/6288989643555?text=' + encodeURIComponent(text);
 
       if (formAlert) {
         formAlert.textContent = 'Pesan telah disiapkan, mengalihkan ke WhatsApp...';
