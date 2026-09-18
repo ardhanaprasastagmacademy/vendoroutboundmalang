@@ -1,0 +1,68 @@
+# ==============================================================================
+# robots.txt for https://vendoroutboundmalang.web.id
+# Optimized for Search Engines (SEO) & AI Search / Summarization (GEO / AEO)
+# ==============================================================================
+
+# Default Rule: Allow all search engines & crawlers
+User-agent: *
+Allow: /
+
+# ------------------------------------------------------------------------------
+# Explicit Permissions for AI Search & Summarization Bots (AEO & GEO Optimization)
+# ------------------------------------------------------------------------------
+
+# OpenAI (ChatGPT, SearchGPT, GPTBot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Google (Googlebot, Gemini, AI Overviews, Google-Extended)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude AI)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Apple (Apple Intelligence & Siri Web Summarization)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Common Crawl & Open AI Datasets
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ------------------------------------------------------------------------------
+# Sitemap Index
+# ------------------------------------------------------------------------------
+Sitemap: https://vendoroutboundmalang.web.id/sitemap.xml
