@@ -77,10 +77,10 @@ Pengunjung setelah membuka website diharapkan:
 │   ├── paintball.html
 │   └── rafting.html
 ├── paket.html                    (Paket)
+├── blog.html                     (Blog Archive & Panduan)
 ├── blog/
-│   ├── index.html
-│   ├── artikel-1.html
-│   └── artikel-2.html
+│   ├── tips-memilih-vendor-outbound.html
+│   └── rekomendasi-lokasi-outbound-malang.html
 ├── galeri.html                   (Galeri)
 └── kontak.html                   (Kontak)
 ```

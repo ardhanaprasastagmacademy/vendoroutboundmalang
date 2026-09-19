@@ -1,0 +1,30 @@
+# ================================================================
+# VENDOR OUTBOUND MALANG - APACHE / LITESPEED / CPANEL CONFIG
+# ================================================================
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect non-existing files/folders to 404.html if needed or handle clean URLs
+  # Hide .html extension for clean URLs
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html [NC,L]
+
+  # If file or folder does not exist, serve 404.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ /404.html [L]
+</IfModule>
+
+# Security Headers & MIME types
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>
