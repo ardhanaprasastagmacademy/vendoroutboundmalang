@@ -181,39 +181,54 @@
   }
 
   // ============================================================
-  // 3D FAN / DECK GALLERY INTERACTIVE CONTROLLER
+  // GALLERY CAROUSEL INTERACTIVE CONTROLLER (SMOOTH & RESPONSIVE)
   // ============================================================
   var fanWrapper = document.getElementById('galleryFan');
   if (fanWrapper) {
+    var fanTrack = document.getElementById('galleryFanTrack') || fanWrapper;
     var cards = fanWrapper.querySelectorAll('.gallery-fan-card');
     var dots = fanWrapper.querySelectorAll('.gallery-fan-dot');
     var currentActive = 2; // Center card (index 2)
     var totalCards = cards.length;
+    var autoTimer = null;
+    var isPaused = false;
 
     var updateFanPositions = function (activeIndex) {
-      currentActive = activeIndex;
+      currentActive = (activeIndex + totalCards) % totalCards;
 
       cards.forEach(function (card, i) {
-        var diff = i - activeIndex;
+        var diff = i - currentActive;
         if (diff < -2) diff += totalCards;
         if (diff > 2) diff -= totalCards;
 
         card.setAttribute('data-pos', diff);
         if (diff === 0) {
           card.classList.add('active');
+          card.setAttribute('aria-current', 'true');
         } else {
           card.classList.remove('active');
+          card.removeAttribute('aria-current');
         }
       });
 
       // Update dot indicators
       dots.forEach(function (dot, i) {
-        if (i === activeIndex) {
+        if (i === currentActive) {
           dot.classList.add('active');
+          dot.setAttribute('aria-selected', 'true');
         } else {
           dot.classList.remove('active');
+          dot.setAttribute('aria-selected', 'false');
         }
       });
+    };
+
+    var goToNext = function () {
+      updateFanPositions(currentActive + 1);
+    };
+
+    var goToPrev = function () {
+      updateFanPositions(currentActive - 1);
     };
 
     // Click & Keyboard support on cards
@@ -235,10 +250,18 @@
             updateFanPositions(index);
             resetAutoRotate();
           }
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goToNext();
+          resetAutoRotate();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goToPrev();
+          resetAutoRotate();
         }
       });
 
-      // Prevent dragging
+      // Prevent dragging image
       card.addEventListener('dragstart', function (e) {
         e.preventDefault();
         return false;
@@ -261,19 +284,67 @@
       });
     });
 
-    // Auto rotate every 2 seconds (2000ms)
-    var autoTimer = null;
+    // Pause on mouse hover, resume on mouse leave
+    fanWrapper.addEventListener('mouseenter', function () {
+      isPaused = true;
+      if (autoTimer) clearInterval(autoTimer);
+    });
+
+    fanWrapper.addEventListener('mouseleave', function () {
+      isPaused = false;
+      startAutoRotate();
+    });
+
+    // Touch / Swipe support for Mobile & Tablets
+    var touchStartX = 0;
+    var touchStartY = 0;
+    var touchEndX = 0;
+    var isSwiping = false;
+
+    fanTrack.addEventListener('touchstart', function (e) {
+      if (e.touches && e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchEndX = touchStartX;
+        isSwiping = true;
+        if (autoTimer) clearInterval(autoTimer);
+      }
+    }, { passive: true });
+
+    fanTrack.addEventListener('touchmove', function (e) {
+      if (!isSwiping || !e.touches || e.touches.length !== 1) return;
+      touchEndX = e.touches[0].clientX;
+    }, { passive: true });
+
+    fanTrack.addEventListener('touchend', function (e) {
+      if (!isSwiping) return;
+      isSwiping = false;
+      var diffX = touchStartX - touchEndX;
+      // Minimum swipe threshold: 40px
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) {
+          goToNext(); // Swiped left -> next
+        } else {
+          goToPrev(); // Swiped right -> prev
+        }
+      }
+      startAutoRotate();
+    }, { passive: true });
+
+    // Smooth Auto Rotation (3800ms)
     var startAutoRotate = function () {
       if (autoTimer) clearInterval(autoTimer);
+      if (isPaused) return;
       autoTimer = setInterval(function () {
-        var nextIndex = (currentActive + 1) % totalCards;
-        updateFanPositions(nextIndex);
-      }, 2000);
+        goToNext();
+      }, 3800);
     };
 
     var resetAutoRotate = function () {
       if (autoTimer) clearInterval(autoTimer);
-      startAutoRotate();
+      if (!isPaused) {
+        startAutoRotate();
+      }
     };
 
     startAutoRotate();
