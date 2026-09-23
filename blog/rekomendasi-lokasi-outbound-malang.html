@@ -509,11 +509,346 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Vendor Outbound Malang. Hak cipta dilindungi.</span>
-      <span>Vendor Outbound Malang &amp; Batu</span>
+        <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Vendor Outbound Malang. Seluruh hak cipta dilindungi.</p>
+      <div class="footer-bottom-links">
+        <a href="../tentang.html">Tentang</a>
+        <span>•</span>
+        <a href="../kontak.html">Kontak</a>
+        <span>•</span>
+        <button type="button" class="footer-network-link" data-bs-toggle="modal" data-bs-target="#networkModal" aria-label="Buka popup daftar website network">
+          <svg class="footer-network-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          Network
+        </button>
+      </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       NETWORK MODAL POPUP (Anti-Slop Compliant)
+       ============================================================ -->
+  <div class="modal fade modal-network" id="networkModal" tabindex="-1" aria-labelledby="networkModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title-wrap">
+            <h3 class="modal-title" id="networkModalTitle">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              Jaringan Website Kami
+            </h3>
+            <p class="modal-subtitle">Jelajahi jaringan website partner dan layanan outdoor kami di Malang Raya, Jawa Timur, dan seluruh Indonesia.</p>
+          </div>
+          <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Tutup jendela popup network">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="network-toolbar">
+            <div class="network-search-box">
+              <svg class="network-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="networkSearchInput" placeholder="Cari website network..." aria-label="Cari website network">
+            </div>
+            <span class="network-count-badge" id="networkCountBadge">17 Website Terdaftar</span>
+          </div>
+
+          <div class="network-grid" id="networkGrid">
+            <a href="https://provideroutbound.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="provideroutbound.web.id" data-title="Provider Outbound Indonesia">
+              <div class="network-card-top">
+                <span class="network-card-title">Provider Outbound Indonesia</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">provideroutbound.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Provider &amp; Training</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundbatumalang.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundbatumalang.web.id" data-title="Outbound Batu Malang">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Batu Malang</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundbatumalang.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Malang &amp; Batu</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundmalang.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundmalang.web.id" data-title="Outbound Malang">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Malang</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundmalang.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Malang Raya</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://paketoutboundmalang.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="paketoutboundmalang.web.id" data-title="Paket Outbound Malang">
+              <div class="network-card-top">
+                <span class="network-card-title">Paket Outbound Malang</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">paketoutboundmalang.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Paket &amp; Program</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://offroad.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="offroad.web.id" data-title="Offroad Adventure Indonesia">
+              <div class="network-card-top">
+                <span class="network-card-title">Offroad Adventure</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">offroad.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">4x4 &amp; Adventure</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://paintball.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="paintball.web.id" data-title="Paintball Indonesia">
+              <div class="network-card-top">
+                <span class="network-card-title">Paintball Indonesia</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">paintball.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Tactical Game</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://rafting.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="rafting.web.id" data-title="Rafting Indonesia">
+              <div class="network-card-top">
+                <span class="network-card-title">Rafting Indonesia</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">rafting.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Arung Jeram</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundpantai.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundpantai.web.id" data-title="Outbound Pantai">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Pantai</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundpantai.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Wisata Bahari</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://paintballbatumalang.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="paintballbatumalang.web.id" data-title="Paintball Batu Malang">
+              <div class="network-card-top">
+                <span class="network-card-title">Paintball Batu Malang</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">paintballbatumalang.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Paintball Batu</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://malangtraveler.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="malangtraveler.web.id" data-title="Malang Traveler">
+              <div class="network-card-top">
+                <span class="network-card-title">Malang Traveler</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">malangtraveler.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Wisata &amp; Tour</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundkediri.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundkediri.web.id" data-title="Outbound Kediri">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Kediri</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundkediri.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Kediri Raya</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://pantaimalangselatan.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="pantaimalangselatan.web.id" data-title="Pantai Malang Selatan">
+              <div class="network-card-top">
+                <span class="network-card-title">Pantai Malang Selatan</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">pantaimalangselatan.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Eksplor Pantai</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://jasaoutboundmalang.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="jasaoutboundmalang.web.id" data-title="Jasa Outbound Malang">
+              <div class="network-card-top">
+                <span class="network-card-title">Jasa Outbound Malang</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">jasaoutboundmalang.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Jasa Profesional</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundindonesia.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundindonesia.web.id" data-title="Outbound Indonesia">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Indonesia</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundindonesia.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Nasional</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://indonesiaoutbound.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="indonesiaoutbound.web.id" data-title="Indonesia Outbound">
+              <div class="network-card-top">
+                <span class="network-card-title">Indonesia Outbound</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">indonesiaoutbound.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Nusantara</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://gemilangkatunoutbound.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="gemilangkatunoutbound.web.id" data-title="Gemilang Katun Outbound">
+              <div class="network-card-top">
+                <span class="network-card-title">Gemilang Katun Outbound</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">gemilangkatunoutbound.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Partner Outbound</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+
+            <a href="https://outboundjatim.web.id" target="_blank" rel="noopener noreferrer" class="network-card" data-domain="outboundjatim.web.id" data-title="Outbound Jawa Timur">
+              <div class="network-card-top">
+                <span class="network-card-title">Outbound Jawa Timur</span>
+                <svg class="network-card-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </div>
+              <span class="network-card-domain">outboundjatim.web.id</span>
+              <div class="network-card-bottom">
+                <span class="network-card-tag">Jawa Timur</span>
+                <span class="network-card-action">Kunjungi &rarr;</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="network-empty-state d-none" id="networkEmptyState">
+            <p>Tidak ada website network yang sesuai dengan pencarian Anda.</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p class="modal-footer-note">Jaringan website resmi terpercaya outbound &amp; adventure.</p>
+          <button type="button" class="btn-modal-close" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- WhatsApp Floating Widget & Pop-up -->
   <div class="wa-floating-widget" id="waFloatingWidget">

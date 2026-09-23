@@ -636,6 +636,53 @@
       }
     });
   }
+
+  // ============================================================
+  // Network Modal Search & Filter Controller
+  // ============================================================
+  var networkSearchInput = document.getElementById('networkSearchInput');
+  var networkCards = document.querySelectorAll('.network-card');
+  var networkCountBadge = document.getElementById('networkCountBadge');
+  var networkEmptyState = document.getElementById('networkEmptyState');
+
+  if (networkSearchInput && networkCards.length) {
+    var totalCards = networkCards.length;
+
+    networkSearchInput.addEventListener('input', function () {
+      var query = networkSearchInput.value.toLowerCase().trim();
+      var visibleCount = 0;
+
+      networkCards.forEach(function (card) {
+        var domain = (card.getAttribute('data-domain') || '').toLowerCase();
+        var title = (card.getAttribute('data-title') || '').toLowerCase();
+        var text = card.textContent.toLowerCase();
+
+        if (!query || domain.indexOf(query) !== -1 || title.indexOf(query) !== -1 || text.indexOf(query) !== -1) {
+          card.classList.remove('d-none');
+          visibleCount++;
+        } else {
+          card.classList.add('d-none');
+        }
+      });
+
+      if (networkCountBadge) {
+        if (query) {
+          networkCountBadge.textContent = visibleCount + ' Ditemukan';
+        } else {
+          networkCountBadge.textContent = totalCards + ' Website Terdaftar';
+        }
+      }
+
+      if (networkEmptyState) {
+        if (visibleCount === 0) {
+          networkEmptyState.classList.remove('d-none');
+        } else {
+          networkEmptyState.classList.add('d-none');
+        }
+      }
+    });
+  }
 })();
+
 
 
