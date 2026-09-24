@@ -497,7 +497,7 @@
       if (!isValid) return;
 
       var text = formatWhatsAppMessage();
-      var waUrl = 'https://wa.me/6288989643555?text=' + encodeURIComponent(text);
+      var waUrl = 'https://wa.me/6282211221909?text=' + encodeURIComponent(text);
 
       if (formAlert) {
         formAlert.textContent = 'Pesan telah disiapkan, mengalihkan ke WhatsApp...';
