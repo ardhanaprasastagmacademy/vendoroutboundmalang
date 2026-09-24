@@ -31,6 +31,20 @@
   <meta name="twitter:description" content="Blog dan artikel tentang kegiatan outbound, team building, gathering, dan tips aktivitas outdoor di Malang.">
   <meta name="twitter:image" content="https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp">
 
+    <!-- Preconnect & DNS Prefetch for CDNs & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Google Fonts Outfit, Playfair Display, Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Preload LCP Image -->
+  <link rel="preload" as="image" href="assets/img/web/hero-out.webp" fetchpriority="high">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/logo/favicon.jpeg" type="image/jpeg">
@@ -40,26 +54,139 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Blog Vendor Outbound Malang",
-    "description": "Blog dan artikel tentang kegiatan outbound, team building, gathering, dan tips aktivitas outdoor di Malang.",
-    "url": "https://vendoroutboundmalang.web.id/blog",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Vendor Outbound Malang",
-      "url": "https://vendoroutboundmalang.web.id"
-    },
-    "inLanguage": "id",
-    "blogPost": [
+    "@graph": [
       {
-        "@type": "BlogPosting",
-        "headline": "Tips Memilih Vendor Outbound yang Tepat untuk Perusahaan",
-        "url": "https://vendoroutboundmalang.web.id/blog/tips-memilih-vendor-outbound"
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://vendoroutboundmalang.web.id"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog & Panduan Outbound",
+            "item": "https://vendoroutboundmalang.web.id/blog"
+          }
+        ]
       },
       {
-        "@type": "BlogPosting",
-        "headline": "Rekomendasi Lokasi Outbound di Malang dan Sekitarnya",
-        "url": "https://vendoroutboundmalang.web.id/blog/rekomendasi-lokasi-outbound-malang"
+        "@type": "LocalBusiness",
+        "name": "Vendor Outbound Malang",
+        "description": "Penyedia layanan outbound, gathering, team building, dan aktivitas outdoor di Malang Raya & Batu.",
+        "url": "https://vendoroutboundmalang.web.id",
+        "image": "https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp",
+        "telephone": "+6282211221909",
+        "priceRange": "Rp",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Diponegoro Gg. IV No 14 RT 01 RW 05 Kel. Sisir Kec. Batu",
+          "addressLocality": "Kota Batu",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "65314",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -7.978,
+          "longitude": 112.634
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Malang" },
+          { "@type": "City", "name": "Batu" },
+          { "@type": "AdministrativeArea", "name": "Jawa Timur" }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Vendor Outbound Malang",
+        "url": "https://vendoroutboundmalang.web.id",
+        "logo": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.png",
+        "image": "https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp",
+        "telephone": "+6282211221909",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Diponegoro Gg. IV No 14 RT 01 RW 05 Kel. Sisir Kec. Batu",
+          "addressLocality": "Kota Batu",
+          "addressRegion": "Jawa Timur",
+          "postalCode": "65314",
+          "addressCountry": "ID"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+6282211221909",
+          "contactType": "customer service",
+          "areaServed": "ID",
+          "availableLanguage": "Indonesian"
+        }
+      },
+      {
+        "@type": "Blog",
+        "name": "Blog Vendor Outbound Malang",
+        "description": "Blog dan artikel tentang kegiatan outbound, team building, gathering, dan tips aktivitas outdoor di Malang.",
+        "url": "https://vendoroutboundmalang.web.id/blog",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vendor Outbound Malang",
+          "url": "https://vendoroutboundmalang.web.id",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.png"
+          }
+        },
+        "inLanguage": "id",
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Tips Memilih Vendor Outbound yang Tepat untuk Perusahaan",
+            "description": "Panduan lengkap memilih vendor outbound profesional untuk gathering dan team building perusahaan.",
+            "url": "https://vendoroutboundmalang.web.id/blog/tips-memilih-vendor-outbound",
+            "image": "https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp",
+            "datePublished": "2026-01-15T08:00:00+07:00",
+            "dateModified": "2026-01-15T08:00:00+07:00",
+            "author": {
+              "@type": "Person",
+              "name": "Ardhana Prasasta",
+              "url": "https://vendoroutboundmalang.web.id/author/ardhanaprasasta"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Vendor Outbound Malang",
+              "url": "https://vendoroutboundmalang.web.id",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.png"
+              }
+            },
+            "mainEntityOfPage": "https://vendoroutboundmalang.web.id/blog/tips-memilih-vendor-outbound"
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Rekomendasi Lokasi Outbound di Malang dan Sekitarnya",
+            "description": "Rekomendasi lokasi outbound di Malang: area pegunungan, area sungai, dan lokasi terbuka yang cocok untuk berbagai jenis kegiatan outdoor.",
+            "url": "https://vendoroutboundmalang.web.id/blog/rekomendasi-lokasi-outbound-malang",
+            "image": "https://vendoroutboundmalang.web.id/assets/img/web/layanan-adventure.webp",
+            "datePublished": "2026-02-10T09:00:00+07:00",
+            "dateModified": "2026-02-10T09:00:00+07:00",
+            "author": {
+              "@type": "Person",
+              "name": "Ardhana Prasasta",
+              "url": "https://vendoroutboundmalang.web.id/author/ardhanaprasasta"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Vendor Outbound Malang",
+              "url": "https://vendoroutboundmalang.web.id",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.png"
+              }
+            },
+            "mainEntityOfPage": "https://vendoroutboundmalang.web.id/blog/rekomendasi-lokasi-outbound-malang"
+          }
+        ]
       }
     ]
   }
@@ -71,7 +198,7 @@
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <span class="brand-logo-mark" aria-hidden="true">
-          <img src="assets/img/logo/favicon.png" alt="Logo Vendor Outbound Malang" width="42" height="42">
+          <img src="assets/img/logo/favicon.png" alt="Logo Vendor Outbound Malang" width="42" height="42" decoding="async">
         </span>
         <span class="brand-logo-text">
           <span class="brand-name">Vendor Outbound</span>
@@ -133,7 +260,7 @@
           <!-- Card 1 -->
           <a href="blog/tips-memilih-vendor-outbound.html" class="blog-grid-card">
             <div class="blog-grid-card-thumb">
-              <img src="assets/img/web/hero-out.webp" alt="Tips Memilih Vendor Outbound" width="400" height="260" loading="eager">
+              <img src="assets/img/web/hero-out.webp" alt="Tips Memilih Vendor Outbound" width="400" height="260" loading="eager" decoding="async">
             </div>
             <div class="blog-grid-card-body">
               <h2 class="blog-grid-card-title">Tips Memilih Vendor Outbound yang Tepat untuk Perusahaan</h2>
@@ -148,7 +275,7 @@
           <!-- Card 2 -->
           <a href="blog/rekomendasi-lokasi-outbound-malang.html" class="blog-grid-card">
             <div class="blog-grid-card-thumb">
-              <img src="assets/img/web/layanan-adventure.webp" alt="Rekomendasi Lokasi Outbound Malang" width="400" height="260" loading="lazy">
+              <img src="assets/img/web/layanan-adventure.webp" alt="Rekomendasi Lokasi Outbound Malang" width="400" height="260" loading="lazy" decoding="async">
             </div>
             <div class="blog-grid-card-body">
               <h2 class="blog-grid-card-title">Rekomendasi Lokasi Outbound di Malang dan Sekitarnya</h2>
@@ -163,7 +290,7 @@
           <!-- Card 3 -->
           <a href="layanan/team-building.html" class="blog-grid-card">
             <div class="blog-grid-card-thumb">
-              <img src="assets/img/web/layanan-perusahaan.jpg" alt="Panduan Team Building" width="400" height="260" loading="lazy">
+              <img src="assets/img/web/layanan-perusahaan.webp" alt="Panduan Team Building" width="400" height="260" loading="lazy" decoding="async">
             </div>
             <div class="blog-grid-card-body">
               <h2 class="blog-grid-card-title">Panduan Efektif Membangun Sinergi Tim Lewat Team Building</h2>
@@ -178,7 +305,7 @@
           <!-- Card 4 -->
           <a href="layanan/rafting.html" class="blog-grid-card">
             <div class="blog-grid-card-thumb">
-              <img src="assets/img/web/about-out.webp" alt="Sensasi Rafting Kasembon" width="400" height="260" loading="lazy">
+              <img src="assets/img/web/about-out.webp" alt="Sensasi Rafting Kasembon" width="400" height="260" loading="lazy" decoding="async">
             </div>
             <div class="blog-grid-card-body">
               <h2 class="blog-grid-card-title">Sensasi Rafting dan Arung Jeram Seru di Kasembon Malang</h2>
@@ -199,7 +326,7 @@
       <div class="footer-brand-col">
         <a class="footer-brand" href="index.html" aria-label="Vendor Outbound Malang Beranda">
           <span class="brand-logo-mark" aria-hidden="true" style="width: 40px; height: 40px;">
-            <img src="assets/img/logo/favicon.png" alt="Logo Vendor Outbound Malang" width="40" height="40">
+            <img src="assets/img/logo/favicon.png" alt="Logo Vendor Outbound Malang" width="40" height="40" decoding="async">
           </span>
           <span class="brand-logo-text">
             <span class="brand-name" style="font-size: 1.25rem;">Vendor Outbound</span>
@@ -599,7 +726,7 @@
     <div class="wa-popup-card" id="waPopupCard" aria-hidden="true" role="dialog" aria-label="Bantuan Konsultasi WhatsApp">
       <div class="wa-popup-header">
         <div class="wa-popup-avatar">
-          <img src="assets/img/logo/favicon.png" alt="Admin Outbound" width="26" height="26">
+          <img src="assets/img/logo/favicon.png" alt="Admin Outbound" width="26" height="26" decoding="async">
           <span class="wa-status-dot" aria-label="Status online"></span>
         </div>
         <div class="wa-popup-info">
@@ -648,7 +775,7 @@
     </svg>
   </button>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
