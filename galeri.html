@@ -38,7 +38,7 @@
     content="Galeri dokumentasi kegiatan outbound, gathering, team building, dan aktivitas outdoor di Malang.">
   <meta name="twitter:image" content="https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp">
 
-    <!-- Preconnect & DNS Prefetch for CDNs & Fonts -->
+        <!-- Preconnect & DNS Prefetch for CDNs & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -46,17 +46,20 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 
-  <!-- Google Fonts Outfit, Playfair Display, Plus Jakarta Sans -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
   <!-- Preload LCP Image -->
   <link rel="preload" as="image" href="assets/img/layanan/outbound-perusahaan-1.webp" fetchpriority="high">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260918_3">
+  <!-- Google Fonts Outfit, Playfair Display, Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-  <!-- Schema.org Data Terstruktur -->
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo/favicon.jpeg" type="image/jpeg">
+  <link rel="shortcut icon" href="assets/img/logo/favicon.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/img/logo/favicon.jpeg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,19 +76,20 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Galeri Kegiatan",
+            "name": "Galeri",
             "item": "https://vendoroutboundmalang.web.id/galeri"
           }
         ]
       },
       {
         "@type": "LocalBusiness",
+        "@id": "https://vendoroutboundmalang.web.id/#localbusiness",
         "name": "Vendor Outbound Malang",
-        "description": "Galeri dokumentasi kegiatan outbound, gathering, team building, dan aktivitas outdoor di Malang.",
         "url": "https://vendoroutboundmalang.web.id",
-        "image": "https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp",
+        "logo": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.jpeg",
+        "image": "https://vendoroutboundmalang.web.id/assets/img/layanan/outbound-perusahaan-1.webp",
+        "description": "Galeri foto dan dokumentasi kegiatan outbound, gathering perusahaan, team building, rafting, paintball, dan offroad di Malang Raya dan Kota Batu.",
         "telephone": "+6282211221909",
-        "priceRange": "Rp",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl. Diponegoro Gg. IV No 14 RT 01 RW 05 Kel. Sisir Kec. Batu",
@@ -96,105 +100,20 @@
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": -7.978,
-          "longitude": 112.634
-        },
-        "areaServed": [
-          { "@type": "City", "name": "Malang" },
-          { "@type": "City", "name": "Batu" },
-          { "@type": "AdministrativeArea", "name": "Jawa Timur" }
-        ]
+          "latitude": -7.8712,
+          "longitude": 112.527
+        }
       },
       {
         "@type": "Organization",
+        "@id": "https://vendoroutboundmalang.web.id/#organization",
         "name": "Vendor Outbound Malang",
         "url": "https://vendoroutboundmalang.web.id",
-        "logo": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.png",
-        "image": "https://vendoroutboundmalang.web.id/assets/img/web/hero-out.webp",
-        "telephone": "+6282211221909",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Diponegoro Gg. IV No 14 RT 01 RW 05 Kel. Sisir Kec. Batu",
-          "addressLocality": "Kota Batu",
-          "addressRegion": "Jawa Timur",
-          "postalCode": "65314",
-          "addressCountry": "ID"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+6282211221909",
-          "contactType": "customer service",
-          "areaServed": "ID",
-          "availableLanguage": "Indonesian"
-        }
+        "logo": "https://vendoroutboundmalang.web.id/assets/img/logo/favicon.jpeg"
       }
     ]
   }
   </script>
-  <style>
-    .galeri-item {
-      position: relative !important;
-      border-radius: 20px !important;
-      overflow: hidden !important;
-      isolation: isolate !important;
-      aspect-ratio: 3 / 3.9 !important;
-      min-height: 350px !important;
-      background-color: #0D5C64 !important;
-      border: none !important;
-      outline: none !important;
-      box-shadow: 0 8px 24px rgba(13, 92, 100, 0.1) !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-end !important;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    .galeri-item:hover {
-      transform: translateY(-6px) !important;
-      box-shadow: 0 16px 36px rgba(13, 92, 100, 0.2) !important;
-    }
-
-    .galeri-item img {
-      position: absolute !important;
-      inset: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-      border-radius: 20px !important;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    .galeri-item:hover img {
-      transform: scale(1.06) !important;
-    }
-
-    .galeri-card-overlay {
-      position: absolute !important;
-      inset: 0 !important;
-      z-index: 2 !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: flex-end !important;
-      align-items: center !important;
-      text-align: center !important;
-      padding: 1.5rem 1rem 1.35rem !important;
-      background: linear-gradient(180deg, rgba(13, 92, 100, 0) 0%, rgba(13, 92, 100, 0.04) 40%, rgba(13, 92, 100, 0.65) 68%, rgba(13, 92, 100, 0.94) 88%, #0D5C64 100%) !important;
-      pointer-events: none !important;
-    }
-
-    .galeri-card-title {
-      font-family: var(--font-navbar) !important;
-      font-size: 1.18rem !important;
-      font-weight: 700 !important;
-      color: #FFFFFF !important;
-      margin: 0 !important;
-      line-height: 1.3 !important;
-      text-align: center !important;
-    }
-  </style>
-  <link rel="icon" href="assets/img/logo/favicon.jpeg" type="image/jpeg">
-  <link rel="shortcut icon" href="assets/img/logo/favicon.jpeg" type="image/jpeg">
-  <link rel="apple-touch-icon" href="assets/img/logo/favicon.jpeg">
 </head>
 
 <body>
