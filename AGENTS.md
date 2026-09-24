@@ -36,6 +36,11 @@ When making changes to HTML, CSS, or media assets, adhere to these Core Web Vita
 - Maintain WCAG AA contrast standards (minimum 4.5:1 for body text, 3:1 for large text and UI components).
 - Ensure all interactive elements have visible `:focus-visible` styles and minimum 44x44px touch targets.
 
+## 5. Blog & Article Guidelines
+- **Pedoman Khusus Artikel**: Seluruh aturan penulisan artikel blog, batasan meta title (≤ 60 kata/karakter), batasan meta description (≤ 160 kata/karakter), boilerplate HTML, dan struktur DOM acuan master (`blog/rekomendasi-lokasi-outbound-malang.html`) telah didokumentasikan secara terpisah di file:
+  👉 **[PANDUAN_ARTIKEL.md](file:///c:/PROJECT/vendoroutboundmalang/PANDUAN_ARTIKEL.md)**
+
+
 <!-- antislop:start -->
 ## antislop
 For UI, copy, people, mobile layout, or code comments work, load the antislop skill for the task:
